@@ -1,4 +1,5 @@
 #include"libs/data_structures/vector/vector.h"
+#include"libs/data_structures/vectorVoid/vectorVoid.h"
 
 void test_pushBack_emptyVector() {
     vector v = createVector(0);
@@ -76,8 +77,9 @@ void test() {
     test_front_oneElementInVector();
 }
 
-
 int main() {
+    vectorVoid vI = (vectorVoid) {NULL, 0, 0, sizeof(int)};
+    vectorVoid vF = (vectorVoid) {NULL, 0, 0, sizeof(float)};
 
     test();
 

@@ -3,7 +3,7 @@ project(GitProject C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(GitProject main.c libs/algorithms/array/array.c libs/algorithms/array/array.h libs/algorithms/algorithm.c)
+add_executable(GitProject main.c libs/algorithms/array/array.c libs/algorithms/array/array.h libs/algorithms/algorithm.c libs/data_structures/vectorVoid/vectorVoid.c libs/data_structures/vectorVoid/vectorVoid.h)
 
 add_subdirectory(libs)
 target_link_libraries(GitProject data_structures)
