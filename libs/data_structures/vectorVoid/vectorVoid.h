@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <assert.h>
+#include <string.h>
 
 typedef struct vectorVoid {
     void *data; // указатель на нулевой элемент вектора
@@ -30,5 +31,16 @@ void clearV(vectorVoid *v);
 
 void deleteVectorV(vectorVoid *v);
 
+bool isEmptyV(const vectorVoid *v);
+
+bool isFullV(const vectorVoid *v);
+
+void getVectorValueV(vectorVoid *v, const size_t index, void *destination);
+
+void setVectorValueV(vectorVoid *v, const size_t index, const void *source);
+
+void popBackV(vectorVoid *v);
+
+void pushBackV(vectorVoid *v, void *source);
 
 #endif
