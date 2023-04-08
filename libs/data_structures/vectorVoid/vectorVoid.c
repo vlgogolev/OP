@@ -74,7 +74,7 @@ void popBackV(vectorVoid *v) {
         v->size--;
 }
 
-void pushBackV(vectorVoid *v, void *source) {
+void pushBackV(vectorVoid *v, const void *source) {
     if (v->capacity == 0) {
         v->capacity++;
         reserveV(v, v->capacity);

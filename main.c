@@ -78,8 +78,27 @@ void test() {
 }
 
 int main() {
-    vectorVoid vI = (vectorVoid) {NULL, 0, 0, sizeof(int)};
-    vectorVoid vF = (vectorVoid) {NULL, 0, 0, sizeof(float)};
+
+    int n;
+    scanf("%d", &n);
+    vectorVoid v = createVectorV(n, sizeof(int));
+    assert(v.size == 0);
+    assert(v.capacity == 3);
+    assert(v.baseTypeSize == sizeof(int));
+
+    pushBackV(&v, &n);
+    assert(v.capacity == 3);
+    assert(v.size == 1);
+
+    int nNew;
+    getVectorValueV(&v, v.size - 1, &nNew);
+    assert(nNew == n);
+
+    shrinkToFitV(&v);
+    assert(v.capacity == 1);
+
+    clearV(&v);
+    assert (v.size == 0);
 
     test();
 

@@ -41,6 +41,6 @@ void setVectorValueV(vectorVoid *v, const size_t index, const void *source);
 
 void popBackV(vectorVoid *v);
 
-void pushBackV(vectorVoid *v, void *source);
+void pushBackV(vectorVoid *v, const void *source);
 
 #endif
