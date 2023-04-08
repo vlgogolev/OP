@@ -20,5 +20,15 @@ typedef struct vectorVoid {
     // то поле baseTypeSize = sizeof(float)
 } vectorVoid;
 
+vectorVoid createVectorV(const size_t n, const size_t baseTypeSize);
+
+void reserveV(vectorVoid *v, const size_t newCapacity);
+
+void shrinkToFitV(vectorVoid *v);
+
+void clearV(vectorVoid *v);
+
+void deleteVectorV(vectorVoid *v);
+
 
 #endif
